@@ -1,0 +1,64 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fmodern\fcharset0 CourierNewPS-BoldMT;\f1\fmodern\fcharset0 CourierNewPSMT;\f2\fmodern\fcharset0 CourierNewPS-ItalicMT;
+}
+{\colortbl;\red255\green255\blue255;}
+{\info
+{\author RayMan}
+{\*\copyright 2014}}\margl1440\margr1440\vieww25400\viewh13060\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs48 \cf0 LISA
+\f1\b0  - \ul L\ulnone earning \ul I\ulnone mages with \ul S\ulnone ound-based \ul A\ulnone ssistance
+\fs24 \
+\
+	
+\f2\i Project by: Jacob Weisgal, Kevin Rasmussen, and Raymond Friend\
+
+\f1\i0 \
+
+\f0\b LISA
+\f1\b0  is a program that is meant to convert visual data to audio data. Specifically, we map the 
+\f0\b HSB
+\f1\b0  (hue, saturation, and brightness) values of each pixel in an image to an 
+\f0\b FTV
+\f1\b0  value of a particular instant in the audio file. The order in which we choose the pixels matters a great deal, because we wish to choose them in such a way that any size image would be recognizable in the same shape as any other. As is shown in 
+\f2\i Presentation Video.mp4
+\f1\i0 , the Hilbert Curve (a recursive shape) and its many pseudo-Hilbert Curves perfectly fit this requirement. \
+\
+We have chosen this project in order to benefit individuals who have become visually-impaired in their lifetime. We believe with this system, a training module could be designed to expose individuals to this type of data representation. The conversion taking place can be intuitively understood as:\
+\
+	\ul Frequency\ulnone : proportional to Hue (reds with lower frequencies, blues with higher)\
+	\ul Timbre\ulnone : deeper when Saturation is low, lighter when Saturation is high\
+	\ul Volume\ulnone : negatively proportional to Brightness (darkest colors receive loudest sounds)\
+\
+This demo is built to indicate the possibilities of analyzing a 2 dimensional image space over a 1 dimensional soundwave. The included video (
+\f2\i Demo.mp4
+\f1\i0 ) is sped up to indicate the intended run-speed of the demo, but only functions at such a speed on a very fast computer.\
+\
+Another included video (
+\f2\i Presentation Video.mp4
+\f1\i0 ) gives a visualization of what exactly is going on behind the scenes of the calculations and pixel navigation. \
+\
+To run the demo yourself (albeit much slower, to provide your browser a breath to keep up), open the 
+\f2\i index.html
+\f1\i0  file in Firefox (due to its relaxed local security settings). If the 
+\f2\i index.html
+\f1\i0  file is opened directly, there may be some issues with cross-domain security and local storage access on a browser that is not Firefox. \
+\
+
+\f0\b Note: 
+\f1\b0 For the first time you load an image, a caching error may occur where all but the first pixel will be shaded black. If this happens, simply refresh the page and the image will load properly.\
+\
+To change the image processed, replace the variable '
+\f0\b IMAGE_SET
+\f1\b0 ' (defined on line 21 of 
+\f2\i index.html
+\f1\i0 ) with the directory to the image of your choice. Some more examples of images able to be processed are included in the 
+\f2\i images 
+\f1\i0 directory.\
+\
+
+\f2\i Hilbert_Stepper.js
+\f1\i0 , while not accessed directly in the demo, was used to generate large sequences of coordinates along a N-th order Hilbert curve.\
+\
+}
