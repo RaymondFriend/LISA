@@ -1,7 +1,5 @@
 # LISA --- Learning Images with Sound-based Assistance
 
-*Project by: Jacob Weisgal, Kevin Rasmussen, and Raymond Friend. April 10, 2016.*
-
 **LISA** is a conversion tool which turns visual data into audio data. We have designed this tool to restore easy digestion of visual content to individuals who have become visually-impaired in their lifetime.
 
 Specifically, we map the HSB (hue, saturation, and brightness) values of each pixel in an image to an FTV value of a particular instant in the audio file. The order in which we choose the pixels matters a great deal, because we wish to choose them in such a way that any size image would be recognizable in the same shape as any other. As is shown in `Presentation Video.mp4`, the Hilbert Curve (a recursive shape) and its many pseudo-Hilbert Curves perfectly fit this requirement. 
@@ -23,3 +21,5 @@ To run the demo yourself (albeit much slower, to provide your browser a breath t
 To change the image processed, replace the variable `IMAGE_SET` (defined on line 21 of `index.html`) with the directory to the image of your choice. Some more examples of images able to be processed are included in the images directory.
 
 `Hilbert_Stepper.js`, while not accessed directly in the demo, was used to generate large sequences of coordinates along a N-th order Hilbert curve.
+
+*Project by: Jacob Weisgal, Kevin Rasmussen, and Raymond Friend. April 10, 2016.*
