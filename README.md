@@ -2,9 +2,11 @@
 
 *Project by: Jacob Weisgal, Kevin Rasmussen, and Raymond Friend. April 10, 2016.*
 
-**LISA** is a program that is meant to convert visual data to audio data. Specifically, we map the HSB (hue, saturation, and brightness) values of each pixel in an image to an FTV value of a particular instant in the audio file. The order in which we choose the pixels matters a great deal, because we wish to choose them in such a way that any size image would be recognizable in the same shape as any other. As is shown in `Presentation Video.mp4`, the Hilbert Curve (a recursive shape) and its many pseudo-Hilbert Curves perfectly fit this requirement. 
+**LISA** is a conversion tool which turns visual data into audio data. We have designed this tool to restore easy digestion of visual content to individuals who have become visually-impaired in their lifetime.
 
-We have chosen this project in order to benefit individuals who have become visually-impaired in their lifetime. We believe with this system, a training module could be designed to expose individuals to this type of data representation. The conversion taking place can be intuitively understood as:
+Specifically, we map the HSB (hue, saturation, and brightness) values of each pixel in an image to an FTV value of a particular instant in the audio file. The order in which we choose the pixels matters a great deal, because we wish to choose them in such a way that any size image would be recognizable in the same shape as any other. As is shown in `Presentation Video.mp4`, the Hilbert Curve (a recursive shape) and its many pseudo-Hilbert Curves perfectly fit this requirement. 
+
+We believe with this system, a training module could be designed to expose visually-impaired individuals to this type of data representation. The conversion taking place can be intuitively understood as:
 
 - *Frequency*: proportional to Hue (reds with lower frequencies, blues with higher)
 - *Timbre*: deeper when Saturation is low, lighter when Saturation is high
